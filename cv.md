@@ -50,9 +50,10 @@ _This is IP-converter_
 
 | years       | place (platform)|
 | :---------- | --------------------------------------: |
-| 2003 - 2009   |   Saratov state university, facultet mechanics and mathematics 
-| 2021        |   Curses on Hexlet.io, Front-end developer |
-| now         |   Curses JavaScript/Front-end in RSSchool |
+| 2003 - 2009   |   Saratov state university, faculty mechanics and mathematics 
+| 2021        |   Courses on Hexlet.io, Front-end developer |
+| now         |   Courses JavaScript/Front-end in RS School |
 
-### Langvige
+### Language
+
 _English level - B1_
