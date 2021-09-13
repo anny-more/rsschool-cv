@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    display: block;
+    background-image: linear-gradient(blue, violet);
+    font-family: 'Josefin Sans', sans-serif;
+}
+h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 64px;
+    letter-spacing: 5px;
+}
+h2 {
+    font-size: 32px;
+}
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    align-content: space-around;
+    justify-content: space-around;
+
+    width: 100vw;
+    color: white;
+    text-align: right;
+}
+.img {
+    display: block;
+    border-radius: 10px;
+    box-shadow: white;
+}
+aside {
+    display: flex;
+    width: 35vw;
+    height: 100vh;
+    flex-wrap: wrap;
+
+    background-color: rgb(255, 255, 255, 0.5);
+    color: gray;
+    font-size: 1rem;
+}
+.wrap {
+    display: block;
+}
+.contacts {
+    width: 400px;
+    height: 45px;
+    color: blue;
+    background-color: rgb(255, 255, 255, 0.5);
+    border-radius: 10px;
+    box-shadow: slategray;
+}
+.contacts p {
+    padding: 10px;
+    font-weight: 700;
+    text-align: center;
+    align-items: center;
+    line-height: 32px;
+    font-size: 32px;
+}
