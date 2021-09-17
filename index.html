@@ -8,96 +8,96 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;600&display=swap" rel="stylesheet">
+<!--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>-->
     <title>Anna Grankina</title>
 </head>
 <body>
+
     <header class="header">
         <div class="wrap">
             <h1>Anna Grankina</h1>
-            <hr>
-            <h2>Junior Softwear developer</h2>
-            <h2>(JavaScript/Front-end)</h2>
-        </div>
-        
-
-        <div class="wrap">
-            <div class="contacts">
-                <p>+7-988-990-2868</p>
-            </div>
-            <div class="contacts">
-                <p>anxxxen@ya.ru</p>
-            </div>
-            <div class="contacts">
-                <p><a href="(https://github.com/anny-more/">@anny-more</a></p>
-            </div>
-            <div class="contacts">
-                <p>Russia, Rostov-on-Don</p>
-            </div>
-        </div>
-        <div class="wrap">
-             <div class="img"><img src="assets/avatarAG.jpg" alt="Anna Grankina"></div>
-        </div>
+            <h2>Junior Softwear developer (JavaScript/Front-end)</h2>
         </div>
     </header>
-   
-    <main>
-       
 
-        <aside>
-    <article>
-       
+        <div class="wrap">
+            <div class="contacts">
+                <img src="assets/avatar.jpg" alt="Anna Grankina" class="img">
+                <ul>
+                    <li><img src="assets/icons/call.png"> +7-988-990-2868</li>
+                    <li><img src="assets/icons/mail.png">anxxxen@ya.ru</li>
+                   <!--<li><img src="assets/icons/github_logo_icon_147285.png" width="25px" height="25px"><a href="https://github.com/anny-more/">@anny-more</a></li>-->
+                    <li><img src="assets/icons/location.png">Russia, Rostov-on-Don</li>
 
-    </article>
-    <article>
-        <h2>Scills</h2>
-        <div>
-            * HTML 
-* CSS
-* JavaScript 
-* Git, Git-hub
-* VSCode
+                </ul>
+            </div>
         </div>
-    </article>
-    <article>
-        <h2>Language</h2>
-        <div>
-            English level - B1
+        <main class="main">
+            <div class="wrap">
+                <div class="wrap_about">
+                <h2>About me</h2>
+                    <div class="about">A wonderful things happens around. A websites became not just informational resource but more bigger. 
+                    They are translator to beautifully interactive world, i mean World wide web.And I got caught.</div>
+                    <div class="about">I`m learning to create this wonderfull Windows to magic interactive World.
+                        And soon it will be the windows on yours screens.</div>
+                    <div class="about">I likes tasks that makes me sweat. More interesting thing that I does was a algorithmic task with reverse 
+                        polish entry, or decode Morse's alphabet. The biggest exciting was,then I make the little pictures works, 
+                        like play/pause video, skip images and etc...</div>
+                    
+                </div>
         </div>
-    </article>
-</aside>
-
-    <div>
-        <h2>
-            About me
-        </h2>
-        <p>A wonderful things happens around. A websites became not just informational resource but more bigger. They are translator to beautifully interactive world, i mean World wide web.And I got caught.</p>
-        <p>I`m learning to create this wonderfull Windows to magic interactive World. And soon it will be the windows on yours screens.</p>
-        <p>I likes tasks that makes me sweet. More interesting thing that I does was a algorithmic task with reverse polish entry, or decode Morse's alphabet. The biggest exciting was,then I make the little pictures works, like play/pause video, skip images and etc...</p>
-    </div>
-    <div>
-        <h2>
-            Education and Expirience
-        </h2>
-        <p>A wonderful things happens around. A websites became not just informational resource but more bigger. They are translator to beautifully interactive world, i mean World wide web.And I got caught.</p>
-        <p>I`m learning to create this wonderfull Windows to magic interactive World. And soon it will be the windows on yours screens.</p>
-        <p>I likes tasks that makes me sweet. More interesting thing that I does was a algorithmic task with reverse polish entry, or decode Morse's alphabet. The biggest exciting was,then I make the little pictures works, like play/pause video, skip images and etc...</p>
-    </div>
-    <div>
+        </main>
+    <div class="wrap"><div class="line"></div></div>
+    <div class="wrap">
+        <aside class="aside">
+            <div class="scills">
+            <h2>Scills</h2>
+            <ul>
+                <li><img src="assets/icons/HTML 5.png" alt="html">HTML5</li>
+                <li><img src="assets/icons/css3.png" alt="css">CSS3</li>
+                <li><img src="assets/icons/javascript.png" alt="js">JS</li>
+            </ul>
+            </div>
+        <hr>
+            <div>
+                <h2>Language</h2>
+                <div>
+                    English level - B1
+                </div>
+            </div>
+    </aside>
+       
+    <div class="block">
+        <article class="code">
         <h2>
             Code Example
         </h2>
+        <pre><code>
+            export const ipToInt = (string) => {
+                const newString = string.split('.');
+                return newString.reduce(((acc, newStr, index, newString) => {
+                  return acc + Number(newStr) * 256 ** Math.abs(index - 3);
+                }), 0);
+              };
+          
+              export const intToIp = (number) => {
+                const array = chunk(number.toString(2).padStart(32, 0), 8);
+                const results = array.map((arr) => parseInt(arr.join(''), 2));
+                return results.join('.');
+              };
+            </code></pre>
+        </article>
     </div>
-    <div>
-        <h2>
-            Some Projects
-        </h2>
-        <p>A wonderful things happens around. A websites became not just informational resource but more bigger. They are translator to beautifully interactive world, i mean World wide web.And I got caught.</p>
-        <p>I`m learning to create this wonderfull Windows to magic interactive World. And soon it will be the windows on yours screens.</p>
-        <p>I likes tasks that makes me sweat. More interesting thing that I does was a algorithmic task with reverse polish entry, or decode Morse's alphabet. The biggest exciting was,then I make the little pictures works, like play/pause video, skip images and etc...</p>
-    </div>
+</div>
+
     </main>
-    <footer>
-        
-    </footer>
+    <div class="wrap">
+        <footer class="footer">
+        <a href="https://rs.school/js/"><img src="assets/icons/rs_school_js.svg" width="150px"></a>
+        </footer>
+    </div>
+    
 </body>
 </html>
