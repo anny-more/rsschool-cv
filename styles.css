@@ -14,15 +14,21 @@ html {
 }
 body {
     font-family: 'Josefin Sans', sans-serif;
+    color: darkgray;
     margin: 0 auto;
-    /* 
+}
+
+.wrap {
+    width: 80%;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
     align-content: space-around;
-    background-image: linear-gradient(blue, violet);
-    font-family: 'Josefin Sans', sans-serif;
-*/}
-
+    justify-content: stretch;
+    text-align: right;
+}
 h1 {
     font-size: 77px;
     letter-spacing: 5px; 
@@ -37,26 +43,11 @@ h2 {
 .header {
     padding-top: 50px;
     padding-bottom: 50px;
-    color: var(--color-green));
-    max-width: 1450px;
+    color: var(--color-green);
     width: 80%;
     margin: 0 auto;
 }
-.wrap {
-    width: 80%;
-    max-height: 100vh;
-    margin: 0 auto;
-  
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    align-content: space-around;
-    /*justify-content: stretch;*/
 
-    text-align: right;
-    
-}
 .contacts {
     height: 250px;
     width: 100%;
@@ -99,26 +90,24 @@ h2 {
 
 .about {
     display: block;
-    max-height: 500px;
-    max-width: 100%;
+    /*max-height: 500px;*/
     margin: 0;
     padding: 10px;
     color: #333333;
     font-size: 22px;
+    white-space: pre-wrap;
+    /*word-break: break-all;*/
 }
 .main {
     display: flex;
     padding-top: 50px;
     padding-bottom: 50px;
     color: rgb(38, 148, 93);
-    width: 80%;
     margin: 0 auto;   
 }
 .wrap_about {
     margin-left: auto;
     margin-right: auto;
-    max-height: 500px;
-    max-width: 1450px;
 }
 .line {
     height: 40px;
@@ -126,35 +115,86 @@ h2 {
     background: var(--color-green);
 }
 .aside {
-    display: flex;
-    flex-basis: 35%;
-    height: 100%;
-    flex-direction: column;
-    text-align: center;
-    
-
-    background-color: rgb(255, 255, 255, 0.5);
+    display: block;
+    width: 100%;
     color: darkgray;
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 700;
 }
+.scills {
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    justify-content: space-around;
+    text-align: center;
+}
 .scills li {
-    list-style: none;
+    list-style-image: url("assets/icons/check.png");
     line-height: 50px;
+    text-align: left;
 }
 .block {
     height: 100%;
-    display: flex;
-    flex-basis: 65%;
-
+    display: block;
     background-color: rgb(255, 255, 255, 0.5);
     color: darkgray;
     font-size: 16px;
     text-align: left;
 }
+.education {
+    display: block;
+    width: 100%;
+    font-size: 22px;
+}
+table {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 3px solid rgb(255, 255, 255);
+}
+table td {
+    padding: 10px 30px;
+    text-align: right; 
+}
+
+.project {
+    width: 100%;
+}
+.project_wrap {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   padding-bottom: 15px;
+}
+.project_wrap h3 {
+    font-size: 22px;
+}
+.project_wrap p {
+    font-size: 18px;
+}
+a {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.project_link:hover {
+    cursor: pointer;
+    transform: scale(1.2, 1.2);
+} 
 .footer {
     width: 100%;
-    height: 150px;
-    margin-top: 15px;
+    height: 120px;
+    display:flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
     background-color: var(--color-green);
+    font-size: 16px;
+    color:rgb(255, 255, 255);
+}
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
 }
