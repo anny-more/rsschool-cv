@@ -14,32 +14,48 @@
     <link rel="icon" href="assets/icons/javascript.png">
 </head>
 <body>
+        <header>
+            <nav class="nav">
+                <ul class="header_list">
+                    <li class="header_item"><a class="header_link" href="#contacts">Contacts</a></li>
+                    <li class="header_item"><a class="header_link" href="#about_me">About me</a></li>
+                    <li class="header_item"><a class="header_link" href="#scills">Scills</a></li>
+                    <li class="header_item"><a class="header_link" href="#education">Education</a></li>
+                    <li class="header_item"><a class="header_link" href="#experience">Experience</a></li>
+                    <li class="header_item"><a class="header_link" href="#project">Some progects</a></li>
+                    <li class="header_item"><a class="header_link" href="#code">Code example</a></li>
+                </ul>
+            </nav>
+        </header>
+    
     <!--wrapper for whole page-->
     <div class="wrap">
-        <header class="header">
+
+        <section class="head">
             <h1>Anna Grankina</h1>
             <h2>Junior Softwear developer (JavaScript/Front-end)</h2>
-        </header>
+        </section>
 
-        <section class="contacts">
+        <section class="contacts" id="contacts">
             <img src="assets/avatar.jpg" alt="Anna Grankina" class="img">
                 <ul>
                     <li><img src="assets/icons/call.png"> +7-988-990-2868</li>
                     <li><img src="assets/icons/mail.png">anxxxen@ya.ru</li>
-                    <li><img src="assets/icons/location.png">Russia, Rostov-on-Don</li>                </ul>
+                    <li><img src="assets/icons/location.png">Russia, Rostov-on-Don</li>
+                </ul>
         </section>
         
         <main class="main">
-                <div class="wrap_about">
+                <section id="about_me">
                 <h2>About me</h2>
                     <div class="about">Amazing things are happening around us. And websites have become not just an information resource,but much more. They are guides to a beautiful interactive world, I mean the World Wide Web, and I got caught.</div>
                     <div class="about">I am learning how to create these wonderful windows into a magical interactive world. And soon it will be windows on your screens.</div>
                     <div class="about">I like tasks that make me sweat. The most interesting tasks that I did were an algorithmic task with the reverse input of the Polish language or the decoding of the Morse alphabet. The most exciting thing was that I made small pictures, such as playing / pausing a video, and made them work.</div>
                     
-                </div>
+                </section>
         </main>
     <div class="line"></div>
-        <aside class="aside">
+        <aside class="aside" id="scills">
             <div class="scills">
             <h2>Scills</h2>
             <ul>
@@ -61,7 +77,7 @@
             </aside>
 
             <div class="line"></div>
-            <div class="education">
+            <section class="education" id="education">
             <h2>Education</h2>
             <table>
                 <tbody>
@@ -71,8 +87,8 @@
                     <tr><td>2021 - now</td><td>Courses RS School, Front-end developer</td></tr>
                 </tbody>
             </table>
-            </div>
-            <div class="education">
+            </section>
+            <section class="education" id="experience">
                 <h2>Experience</h2>
                 <table>
                     <tbody>
@@ -82,11 +98,11 @@
                         <tr><td>Chairman of the Youth Council</td></tr>
                     </tbody>
                 </table>
-                </div>
+            </section>
 
         <div class="line"></div>
     
-    <section class="project">
+    <section class="project" id="project">
         <h2>Some projects</h2>
         <div class="project_wrap">
             <div>
@@ -97,7 +113,7 @@
 
         <div>
         <h3>Custom-video-player</h3>
-        <p>custom-video-player on JavaScript whiht progress-bar and toogle</p>
+        <p>Custom video player on JavaScript whith progress-bar</p>
     
     <a class="project_link" href="https://rolling-scopes-school.github.io/anny-more-JSFEPRESCHOOL/custom-video-player/ " target="new"><img src="assets/projects/custom-video-player.png" alt="custom-video-player"></a>
 </div>
@@ -106,45 +122,42 @@
 
     <div class="line"></div>
 
-    <div class="block">
+    <section class="block" id="code">
         <article class="code">
-        <h2>
-            Code Example
-        </h2>
-    <div class="description">    
-Implement and export the <b style="color: #0000FF">ipToInt()</b> and <b style="color: #0000FF">intToIp()</b> functions, which convert the representation of an IP address from a decimal format with dots to a 32-bit number in decimal form and vice versa.
+            <h2>Code Example</h2>
+        <div class="description">    
+    Implement and export the <b style="color: #0000FF">ipToInt()</b> and <b style="color: #0000FF">intToIp()</b> functions, which convert the representation of an IP address from a decimal format with dots to a 32-bit number in decimal form and vice versa.
 
-The <b style="color: #0000FF">ipToInt()</b> function takes a string as input and should return a number. And the <b style="color: #0000FF">intToIp()</b> function is the opposite: it takes a number as input, and returns a string.
-    </div>
+    The <b style="color: #0000FF">ipToInt()</b> function takes a string as input and should return a number. And the <b style="color: #0000FF">intToIp()</b> function is the opposite: it takes a number as input, and returns a string.
+        </div>
 
-        <pre><code>
-            export const ipToInt = (string) => {
-                const newString = string.split('.');
-                return newString.reduce(((acc, newStr, index, newString) => {
-                  return acc + Number(newStr) * 256 ** Math.abs(index - 3);
-                }), 0);
-              };
-          
-              export const intToIp = (number) => {
-                const array = chunk(number.toString(2).padStart(32, 0), 8);
-                const results = array.map((arr) => parseInt(arr.join(''), 2));
-                return results.join('.');
-              };
+            <pre><code>
+                export const ipToInt = (string) => {
+                    const newString = string.split('.');
+                    return newString.reduce(((acc, newStr, index, newString) => {
+                    return acc + Number(newStr) * 256 ** Math.abs(index - 3);
+                    }), 0);
+                };
+            
+                export const intToIp = (number) => {
+                    const array = chunk(number.toString(2).padStart(32, 0), 8);
+                    const results = array.map((arr) => parseInt(arr.join(''), 2));
+                    return results.join('.');
+                };
             </code></pre>
         </article>
-    </div>
-</div>
+    </section>
 
     </main>
-    <div class="wrap">
-        <footer class="footer">
-            <p>© 2021 by Anna Grankina</p>
-            <div><a href="https://github.com/anny-more/">Git-hub</a></div>
-            <div class="wrap_href"><a href="https://rs.school/js/"><img src="assets/icons/rs_school_js.svg" width="200px"></a></div>
+
+    <footer class="footer">
+        <p>© 2021 by Anna Grankina</p>
+        <div><a href="https://github.com/anny-more/">Git-hub</a></div>
+        <div class="wrap_href"><a href="https://rs.school/js/"><img src="assets/icons/rs_school_js.svg" width="200px"></a></div>
         
-        </footer>
-    </div>
+    </footer>
 </div>
+
 <!--script for highlight code-->
 <script src="assets/libs/highlight.min.js"></script>
 <script>hljs.highlightAll();</script>

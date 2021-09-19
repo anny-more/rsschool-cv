@@ -1,6 +1,7 @@
 :root {
     --color-green: #009990;
     --color-blue: #2AAEE7;
+    --color-darkgrey: darkgray;
 }
 
 html {
@@ -14,10 +15,36 @@ html {
 }
 body {
     font-family: 'Josefin Sans', sans-serif;
-    color: darkgray;
+    color: var(--color-darkgrey);
     margin: 0 auto;
 }
+.nav {
+    width: 80%;
+    margin: 0 auto;
+}
+.header_list {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.header_item {
+    display: block;
+    list-style: none;
+}
 
+.header_link {
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--color-darkgrey);
+    font-size: 18px;
+    font-weight: 700;
+}
+.header_link:hover {
+    color: var(--color-blue);
+}
 .wrap {
     width: 80%;
     margin: 0 auto;
@@ -30,6 +57,7 @@ body {
     text-align: right;
 }
 h1 {
+    margin-top: 15px;
     font-size: 77px;
     letter-spacing: 5px; 
     text-transform: uppercase;
@@ -40,8 +68,8 @@ h2 {
     letter-spacing: 2px;
     color: var(--color-blue);
 }
-.header {
-    padding-top: 50px;
+.head {
+    padding-top: 30px;
     padding-bottom: 50px;
     color: var(--color-green);
     width: 80%;
@@ -52,16 +80,6 @@ h2 {
     height: 250px;
     width: 100%;
     position: relative;
-
-    /*display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    align-content: space-around;
-    justify-content: space-around;*/
-
-    
-    color: white;
     text-align: right;
     background: var(--color-green);
     border-top-left-radius: 350px;
@@ -90,25 +108,19 @@ h2 {
 
 .about {
     display: block;
-    /*max-height: 500px;*/
     margin: 0;
     padding: 10px;
-    color: #333333;
     font-size: 22px;
     white-space: pre-wrap;
     /*word-break: break-all;*/
 }
 .main {
     display: flex;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    color: rgb(38, 148, 93);
+    padding-top: 30px;
+    padding-bottom: 30px;
     margin: 0 auto;   
 }
-.wrap_about {
-    margin-left: auto;
-    margin-right: auto;
-}
+
 .line {
     height: 40px;
     width: 100%;
