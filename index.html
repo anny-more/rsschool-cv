@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <link href="styles.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,17 +27,33 @@
                 </ul>
             </nav>
         </header>
+    <!--burger-->
+    <div class="burger_menu">
+        <input class="burger_input" type="checkbox" id="burger_btn">
+        <label for="burger_btn" class="burger_btn">
+            <span></span>
+        </label>
+            <ul class="burger_list">
+                <li class="header_item"><a class="header_link" href="#contacts">Contacts</a></li>
+                <li class="header_item"><a class="header_link" href="#about_me">About me</a></li>
+                <li class="header_item"><a class="header_link" href="#scills">Scills</a></li>
+                <li class="header_item"><a class="header_link" href="#education">Education</a></li>
+                <li class="header_item"><a class="header_link" href="#experience">Experience</a></li>
+                <li class="header_item"><a class="header_link" href="#project">Some progects</a></li>
+                <li class="header_item"><a class="header_link" href="#code">Code example</a></li>
+            </ul>
+    </div>
     
     <!--wrapper for whole page-->
     <div class="wrap">
 
         <section class="head">
             <h1>Anna Grankina</h1>
-            <h2>Junior Softwear developer (JavaScript/Front-end)</h2>
+            <h2>Junior Softwear developer (JavaScript / Front-end)</h2>
         </section>
-
+        <div class="img"><img src="assets/avatar.JPG" alt="Anna Grankina" class="img"></div>
+        
         <div class="contacts" id="contacts">
-            <img src="assets/avatar.JPG" alt="Anna Grankina" class="img">
                 <ul>
                     <li><img src="assets/icons/call.png" alt=""> +7-988-990-2868</li>
                     <li><img src="assets/icons/mail.png" alt="">anxxxen@ya.ru</li>
@@ -127,22 +143,23 @@
             <h2>Code Example</h2>
             <div class="description">    
         Implement and export the <b style="color: #0000FF">ipToInt()</b> and <b style="color: #0000FF">intToIp()</b> functions, which convert the representation of an IP address from a decimal format with dots to a 32-bit number in decimal form and vice versa. The <b style="color: #0000FF">ipToInt()</b> function takes a string as input and should return a number. And the <b style="color: #0000FF">intToIp()</b> function is the opposite: it takes a number as input, and returns a string.
-            </div>
+        </div>
+        <pre><code class="code">
+            export const ipToInt = (string) => {
+                const newString = string.split('.');
+                return newString.reduce(((acc, newStr, index, newString) => {
+                return acc + Number(newStr) * 256 ** Math.abs(index - 3);
+                }), 0);
+            };
+        
+            export const intToIp = (number) => {
+                const array = chunk(number.toString(2).padStart(32, 0), 8);
+                const results = array.map((arr) => parseInt(arr.join(''), 2));
+                return results.join('.');
+            };
+        </code></pre>
 
-                <pre><code>
-                    export const ipToInt = (string) => {
-                        const newString = string.split('.');
-                        return newString.reduce(((acc, newStr, index, newString) => {
-                        return acc + Number(newStr) * 256 ** Math.abs(index - 3);
-                        }), 0);
-                    };
                 
-                    export const intToIp = (number) => {
-                        const array = chunk(number.toString(2).padStart(32, 0), 8);
-                        const results = array.map((arr) => parseInt(arr.join(''), 2));
-                        return results.join('.');
-                    };
-                </code></pre>
         </article>
     </div>
 
