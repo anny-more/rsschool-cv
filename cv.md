@@ -17,7 +17,7 @@ A wonderful things happens around. A websites became not just informat
 
 I`m learning to create this wonderfull Windows to magic interactive World. And soon it will be the windows on yours screens.
 
-I likes tasks that makes me sweet. More interesting thing that I does was a algorithmic task with reverse polish entry, or decode Morse's alphabet. The biggest exciting was,then I make the little pictures works, like play/pause video, skip images and etc...
+I likes tasks that makes me sweat. More interesting thing that I does was a algorithmic task with reverse polish entry, or decode Morse's alphabet. The biggest exciting was,then I make the little pictures works, like play/pause video, skip images and etc...
 
 ### Skills
 
