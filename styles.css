@@ -19,9 +19,15 @@ body {
     color: var(--color-darkgrey);
     margin: 0 auto;
 }
+.burger {
+    display: none;
+}
 .nav {
-    max-width: 80%;
+    width: 100%;
     margin: 0 auto;
+    position: fixed;
+    align-items: stretch;
+    top: 0;
 }
 .header_list {
     display: flex;
@@ -33,6 +39,9 @@ body {
 .header_item {
     display: block;
     list-style: none;
+}
+.header_item:last-child {
+    padding-right: 20px;
 }
 
 .header_link {
@@ -58,7 +67,7 @@ body {
     text-align: right;
 }
 h1 {
-    margin-top: 15px;
+    margin-top: 50px;
     font-size: 77px;
     letter-spacing: 5px; 
     text-transform: uppercase;
@@ -213,6 +222,9 @@ a {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+    .burger {
+        display: block;
+    }
     .nav_list {
         display: block;
         text-align: justify;
@@ -266,6 +278,9 @@ a {
 
 }
 @media (min-width: 320px) and (max-width: 767px) {
+    .burger {
+        display: block;
+    }
     .wrap {
         max-width: 100%;
         text-align: center;
@@ -321,4 +336,60 @@ a {
     }
 
 }
+
 /*burger-menu*/
+#burger_menu {
+    opacity: 0;
+}
+.burger_menu_btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+}
+.burger_menu_btn > span,
+.burger_menu_btn > span::before,
+.burger_menu_btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-darkgrey);
+}
+.burger_menu_btn > span::after {
+    content: '';
+    top: -8px;
+}
+.burger_menu_btn > span::before {
+    content: '';
+    top: 8px;
+}
+.burger_list {
+    display: block;
+    position:fixed;
+    opacity: 0;
+}
+.burger_input:checked ~ .burger_menu_btn > span {
+    transform: rotate(45deg);
+}
+.burger_input:checked ~ .burger_menu_btn > span::before {
+    top: 0px;
+    transform: rotate(0);
+}
+.burger_input:checked ~ .burger_menu_btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+.burger_input:checked ~ .burger_list {
+    opacity: 1;
+    transition-delay: 0s;
+}
+.header_item:checked ~ .burger_list{
+    opacity: 0;
+}
+
