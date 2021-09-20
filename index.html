@@ -36,14 +36,14 @@
             <h2>Junior Softwear developer (JavaScript/Front-end)</h2>
         </section>
 
-        <section class="contacts" id="contacts">
+        <div class="contacts" id="contacts">
             <img src="assets/avatar.jpg" alt="Anna Grankina" class="img">
                 <ul>
-                    <li><img src="assets/icons/call.png"> +7-988-990-2868</li>
-                    <li><img src="assets/icons/mail.png">anxxxen@ya.ru</li>
-                    <li><img src="assets/icons/location.png">Russia, Rostov-on-Don</li>
+                    <li><img src="assets/icons/call.png" alt=""> +7-988-990-2868</li>
+                    <li><img src="assets/icons/mail.png" alt="">anxxxen@ya.ru</li>
+                    <li><img src="assets/icons/location.png" alt="">Russia, Rostov-on-Don</li>
                 </ul>
-        </section>
+            </div>
         
         <main class="main">
                 <section id="about_me">
@@ -122,38 +122,34 @@
 
     <div class="line"></div>
 
-    <section class="block" id="code">
-        <article class="code">
+    <div class="block" id="code">
+        <article>
             <h2>Code Example</h2>
-        <div class="description">    
-    Implement and export the <b style="color: #0000FF">ipToInt()</b> and <b style="color: #0000FF">intToIp()</b> functions, which convert the representation of an IP address from a decimal format with dots to a 32-bit number in decimal form and vice versa.
+            <div class="description">    
+        Implement and export the <b style="color: #0000FF">ipToInt()</b> and <b style="color: #0000FF">intToIp()</b> functions, which convert the representation of an IP address from a decimal format with dots to a 32-bit number in decimal form and vice versa. The <b style="color: #0000FF">ipToInt()</b> function takes a string as input and should return a number. And the <b style="color: #0000FF">intToIp()</b> function is the opposite: it takes a number as input, and returns a string.
+            </div>
 
-    The <b style="color: #0000FF">ipToInt()</b> function takes a string as input and should return a number. And the <b style="color: #0000FF">intToIp()</b> function is the opposite: it takes a number as input, and returns a string.
-        </div>
-
-            <pre><code>
-                export const ipToInt = (string) => {
-                    const newString = string.split('.');
-                    return newString.reduce(((acc, newStr, index, newString) => {
-                    return acc + Number(newStr) * 256 ** Math.abs(index - 3);
-                    }), 0);
-                };
-            
-                export const intToIp = (number) => {
-                    const array = chunk(number.toString(2).padStart(32, 0), 8);
-                    const results = array.map((arr) => parseInt(arr.join(''), 2));
-                    return results.join('.');
-                };
-            </code></pre>
+                <pre><code>
+                    export const ipToInt = (string) => {
+                        const newString = string.split('.');
+                        return newString.reduce(((acc, newStr, index, newString) => {
+                        return acc + Number(newStr) * 256 ** Math.abs(index - 3);
+                        }), 0);
+                    };
+                
+                    export const intToIp = (number) => {
+                        const array = chunk(number.toString(2).padStart(32, 0), 8);
+                        const results = array.map((arr) => parseInt(arr.join(''), 2));
+                        return results.join('.');
+                    };
+                </code></pre>
         </article>
-    </section>
-
-    </main>
+    </div>
 
     <footer class="footer">
         <p>© 2021 by Anna Grankina</p>
         <div><a href="https://github.com/anny-more/">Git-hub</a></div>
-        <div class="wrap_href"><a href="https://rs.school/js/"><img src="assets/icons/rs_school_js.svg" width="200px"></a></div>
+        <div class="wrap_href"><a href="https://rs.school/js/"><img src="assets/icons/rs_school_js.svg" alt="link to rsschool"></a></div>
         
     </footer>
 </div>
@@ -161,6 +157,5 @@
 <!--script for highlight code-->
 <script src="assets/libs/highlight.min.js"></script>
 <script>hljs.highlightAll();</script>
-</div>
 </body>
 </html>
