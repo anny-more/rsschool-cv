@@ -1,5 +1,5 @@
 # Anna Grankina
-## Junior Softwear developer (JavaScript/Front-end)
+## Junior Software developer (JavaScript/Front-end)
 
 ----------------------------------------------------
 
@@ -56,4 +56,4 @@ _This is IP-converter_
 
 ### Language
 
-_English level - B1_
+_English level - A2_
